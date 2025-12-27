@@ -1,0 +1,260 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #f5f5f5;
+  font-family: Arial;
+}
+
+/* עוטף כללי */
+.page {
+  width: 80%;
+  margin: 0 auto;
+  background: #ffffff;
+  min-height: 100%;
+}
+
+/* HEADER */
+.header {
+  background: #011755;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+}
+
+.header-links {
+  display: flex;
+  gap: 10px;
+}
+
+.header-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.brand {
+  text-align: left; /* למרות RTL – כדי שהלוגו “יתיישב” יפה */
+}
+
+.brand-name {
+  font-size: 28px;
+  font-weight: bold;
+  display: block;
+}
+
+.brand-sub {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  gap: 14px;
+  padding: 10px 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #111;
+  font-size: 14px;
+  padding: 6px 8px;
+}
+
+.nav-link-active {
+  font-weight: bold;
+  border-bottom: 2px solid #011755;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+/* LAYOUT MAIN + ASIDE */
+.layout {
+  display: flex;
+  gap: 20px;
+  padding: 16px;
+  align-items: flex-start;
+}
+
+.main {
+  flex: 3;
+}
+
+.aside {
+  flex: 1;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  gap: 16px;
+  background: #f2f6ff;
+  border: 1px solid #dbe6ff;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.hero-figure {
+  flex: 1;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.hero-title {
+  font-size: 22px;
+}
+
+.hero-text {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #011755;
+}
+
+.btn-primary {
+  background: #011755;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #011755;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 14px;
+  width: 48%;
+  background: #fff;
+}
+
+.card-title {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.card-text {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.card-link {
+  font-size: 14px;
+  color: #011755;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ASIDE */
+.aside-box {
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: #fff;
+}
+
+.aside-title {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.aside-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.aside-list a {
+  text-decoration: none;
+  color: #111;
+  font-size: 14px;
+}
+
+.aside-text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* FOOTER */
+.footer {
+  border-top: 1px solid #ddd;
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 13px;
+  color: #444;
+}
+
+/* רספונסיביות בסיסית */
+@media (max-width: 768px) {
+  .page {
+    width: 95%;
+  }
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+}

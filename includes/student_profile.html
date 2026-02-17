@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LIVU – תיק סטודנט</title>
+  <link rel="stylesheet" href="../css/site.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+</head>
+
+<body class="page">
+
+  <header class="header">
+    <div class="header-links">
+      <a href="#" title="טרם מומש בפרויקט">שלום אורח/ת</a>
+      <a href="#" title="טרם מומש בפרויקט">התחברות</a>
+    </div>
+    <div class="brand">
+      <span class="brand-name">LIVU</span>
+      <span class="brand-sub">מערכת ליווי אקדמי</span>
+    </div>
+  </header>
+
+   <nav class="nav">
+    <a class="nav-link" href="../index.html">דף הבית</a>
+    <a class="nav-link" href="students.html">סטודנטים במעקב</a>
+    <a class="nav-link" href="new_request.html">קביעת פגישת</a>
+    <a class="nav-link" href="meetings.html">פגישות והתראות</a>
+  </nav>
+
+  <hr class="divider" />
+
+  <div class="layout">
+    <main class="main">
+
+      <section class="box">
+        <h1 class="box-title">תיק סטודנט/ית: <span id="studentName">—</span></h1>
+        <p class="help">ת״ז: <strong id="studentId">—</strong></p>
+
+        <div class="form-actions">
+          <a class="btn btn-primary" href="new_request.html">פתיחת פנייה עבור הסטודנט/ית</a>
+          <a class="btn btn-secondary" href="students.html">חזרה לרשימה</a>
+        </div>
+      </section>
+
+      <section class="box">
+        <h2 class="box-title">פרטים מרכזיים</h2>
+
+        <div class="profile-grid">
+          <article class="profile-item">
+            <h3>חוג</h3>
+            <p id="dept">מערכות מידע</p>
+          </article>
+
+          <article class="profile-item">
+            <h3>סטטוס ליווי</h3>
+            <p><span class="tag" id="statusTag">פעיל</span></p>
+          </article>
+
+          <article class="profile-item">
+            <h3>סיבת פתיחה</h3>
+            <p id="reason">קשיים לימודיים / חזרה ממילואים</p>
+          </article>
+
+          <article class="profile-item">
+            <h3>איש קשר</h3>
+            <p id="contact">יועצת אקדמית – טרם מומש</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="box">
+        <h2 class="box-title">משימות פתוחות</h2>
+        <table class="table" aria-label="טבלת משימות">
+          <thead>
+            <tr>
+              <th>משימה</th>
+              <th>אחראי</th>
+              <th>דדליין</th>
+              <th>סטטוס</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>תיאום פגישה ראשונה</td>
+              <td>מלווה/ת</td>
+              <td>20/02</td>
+              <td><span class="tag">פתוח</span></td>
+            </tr>
+            <tr>
+              <td>איסוף מסמכים להתאמות</td>
+              <td>סטודנט/ית</td>
+              <td>27/02</td>
+              <td><span class="tag">פתוח</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+
+    <aside class="aside">
+      <section class="box">
+        <h2 class="box-title">הערות פנימיות</h2>
+        <p class="help" id="noteArea">
+          כאן אפשר להציג הערות טיפול (בשלב זה דמה).
+        </p>
+        <button class="btn btn-secondary btn-small" id="highlight" type="button">
+          הדגשת הערה 
+        </button>
+      </section>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <p class="footer-text">© מערכת ליווי אקדמי — פרויקט תכנות Web</p>
+  </footer>
+
+  <script src="../JS/student_profile.js"></script>
+</body>
+</html>

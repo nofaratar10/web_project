@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LIVU – סטודנטים במעקב</title>
+  <link rel="stylesheet" href="../css/pages.css" />
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body class="page">
+
+  <header class="header">
+    <div class="header-links">
+      <a href="#" title="טרם מומש בפרויקט">שלום אורח/ת</a>
+      <a href="#" title="טרם מומש בפרויקט">התחברות</a>
+    </div>
+    <div class="brand">
+      <span class="brand-name">LIVU</span>
+      <span class="brand-sub">מערכת ליווי אקדמי</span>
+    </div>
+  </header>
+
+ <nav class="nav">
+    <a class="nav-link" href="../index.html">דף הבית</a>
+    <a class="nav-link" href="students.html">סטודנטים במעקב</a>
+    <a class="nav-link" href="new_request.html">קביעת פגישת</a>
+    <a class="nav-link" href="meetings.html">פגישות והתראות</a>
+  </nav>
+
+  <hr class="divider" />
+
+  <div class="layout">
+    <main class="main">
+
+      <section class="box">
+        <h1 class="box-title">סטודנטים במעקב</h1>
+
+        <div class="search">
+          <input id="q" type="text" placeholder="חיפוש לפי שם / ת״ז / חוג" />
+          <select id="status">
+            <option value="all">כל הסטטוסים</option>
+            <option value="active">פעיל</option>
+            <option value="risk">בסיכון</option>
+            <option value="closed">נסגר</option>
+          </select>
+          <button id="clear" class="btn btn-secondary btn-small" type="button">נקה</button>
+        </div>
+
+        <table class="table" aria-label="טבלת סטודנטים">
+          <thead>
+            <tr>
+              <th>שם</th>
+              <th>ת״ז</th>
+              <th>חוג</th>
+              <th>סטטוס</th>
+              <th>פעולות</th>
+            </tr>
+          </thead>
+          <tbody id="rows">
+            <tr data-status="risk">
+              <td>נועה לוי</td>
+              <td>123456789</td>
+              <td>מערכות מידע</td>
+              <td><span class="tag">בסיכון</span></td>
+              <td>
+                <button class="btn btn-primary btn-small open" type="button"
+                        data-id="123456789" data-name="נועה לוי">פתיחה</button>
+              </td>
+            </tr>
+
+            <tr data-status="active">
+              <td>דניאל כהן</td>
+              <td>987654321</td>
+              <td>מדעי המחשב</td>
+              <td><span class="tag">פעיל</span></td>
+              <td>
+                <button class="btn btn-primary btn-small open" type="button"
+                        data-id="987654321" data-name="דניאל כהן">פתיחה</button>
+              </td>
+            </tr>
+
+            <tr data-status="closed">
+              <td>מאיה אברהם</td>
+              <td>111222333</td>
+              <td>כלכלה</td>
+              <td><span class="tag">נסגר</span></td>
+              <td>
+                <button class="btn btn-primary btn-small open" type="button"
+                        data-id="111222333" data-name="מאיה אברהם">פתיחה</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="help" id="countNote"></p>
+      </section>
+
+    </main>
+
+    <aside class="aside">
+      <section class="box">
+        <h2 class="box-title">טיפ עבודה</h2>
+        <p class="help">
+          השתמשי בחיפוש כדי לאתר סטודנט/ית במהירות.
+          כפתור “פתיחה” יעביר לתיק הסטודנט/ית.
+        </p>
+      </section>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <p class="footer-text">© מערכת ליווי אקדמי — פרויקט תכנות Web</p>
+  </footer>
+
+  <script src="../JS/students.js"></script>
+</body>
+</html>

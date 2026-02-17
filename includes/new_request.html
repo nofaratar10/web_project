@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LIVU – קביעת פגישה</title>
+  <link rel="stylesheet" href="../css/site.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+</head>
+
+<body class="page">
+
+  <header class="header">
+    <div class="header-links">
+      <a href="#" title="טרם מומש בפרויקט">שלום אורח/ת</a>
+      <a href="#" title="טרם מומש בפרויקט">התחברות</a>
+    </div>
+    <div class="brand">
+      <span class="brand-name">LIVU</span>
+      <span class="brand-sub">מערכת ליווי אקדמי</span>
+    </div>
+  </header>
+
+   <nav class="nav">
+    <a class="nav-link" href="../index.html">דף הבית</a>
+    <a class="nav-link" href="students.html">סטודנטים במעקב</a>
+    <a class="nav-link" href="new_request.html">קביעת פגישת</a>
+    <a class="nav-link" href="meetings.html">פגישות והתראות</a>
+  </nav>
+
+  <hr class="divider" />
+
+  <div class="layout">
+    <main class="main">
+
+      <section class="box">
+        <h1 class="box-title">קביעת פגישה חדשה</h1>
+        <p class="help">
+          הטופס מיועד לקביעת פגישה עבור סטודנט/ית או מרצה.
+        </p>
+
+        <form id="meetingForm" action="save_request.php" method="POST" target="_blank">
+
+          <div class="form-row">
+            <label>סוג פונה</label>
+            <select id="personRole" name="personRole">
+              <option value="">בחר/י</option>
+              <option value="student">סטודנט</option>
+              <option value="lecturer">מרצה</option>
+            </select>
+            <div class="text-error" id="roleError"></div>
+          </div>
+
+          <div class="form-row">
+            <label>שם מלא</label>
+            <input id="fullName" name="fullName" type="text" placeholder="לדוגמה: נועה לוי" />
+            <div class="text-error" id="nameError"></div>
+          </div>
+
+          <div class="form-row">
+            <label>מספר מזהה (9 ספרות)</label>
+            <input id="personId" name="personId" type="text" maxlength="9"
+                   placeholder="123456789" pattern="^[0-9]{9}$" />
+            <div class="text-error" id="idError"></div>
+          </div>
+
+          <div class="form-row">
+            <label>טלפון</label>
+            <input id="contactPhone" name="contactPhone" type="tel"
+                   placeholder="0501234567" />
+            <div class="text-error" id="phoneError"></div>
+          </div>
+
+          <div class="form-row">
+            <label>נושא הפגישה</label>
+            <select id="meetingTopic" name="meetingTopic">
+              <option value="">בחר/י</option>
+              <option value="academic">קשיים אקדמיים</option>
+              <option value="adaptations">התאמות</option>
+              <option value="mil">חזרה ממילואים</option>
+              <option value="other">אחר</option>
+            </select>
+            <div class="text-error" id="topicError"></div>
+          </div>
+
+          <div class="form-row">
+            <label>תאריך הפגישה</label>
+            <input id="meetingDate" name="meetingDate" type="date" />
+            <div class="text-error" id="dateError"></div>
+          </div>
+
+          <div class="form-row">
+            <label>פירוט</label>
+            <textarea id="meetingDetails" name="meetingDetails"
+                      rows="5"
+                      placeholder="תיאור קצר של מטרת הפגישה"></textarea>
+            <div class="text-error" id="detailsError"></div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">שמירה</button>
+            <button class="btn btn-secondary" type="reset">ניקוי</button>
+          </div>
+
+          <div class="msg" id="formMessage" style="display:none;"></div>
+
+        </form>
+      </section>
+
+    </main>
+
+    <aside class="aside">
+      <section class="box">
+        <h2 class="box-title">מידע</h2>
+        <p class="help">
+          יש למלא את כל השדות החובה.
+        </p>
+      </section>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <p class="footer-text">© מערכת ליווי אקדמי — פרויקט תכנות Web</p>
+  </footer>
+
+  <script src="../JS/meeting.js"></script>
+</body>
+</html>

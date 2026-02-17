@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LIVU – פגישות והתראות</title>
+  <link rel="stylesheet" href="../css/site.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+</head>
+
+<body class="page">
+
+  <header class="header">
+    <div class="header-links">
+      <a href="#" title="טרם מומש בפרויקט">שלום אורח/ת</a>
+      <a href="#" title="טרם מומש בפרויקט">התחברות</a>
+    </div>
+    <div class="brand">
+      <span class="brand-name">LIVU</span>
+      <span class="brand-sub">מערכת ליווי אקדמי</span>
+    </div>
+  </header>
+
+   <nav class="nav">
+    <a class="nav-link" href="../index.html">דף הבית</a>
+    <a class="nav-link" href="students.html">סטודנטים במעקב</a>
+    <a class="nav-link" href="new_request.html">קביעת פגישת</a>
+    <a class="nav-link" href="meetings.html">פגישות והתראות</a>
+  </nav>
+
+  <hr class="divider" />
+
+  <div class="layout">
+    <main class="main">
+
+      <section class="box">
+        <h1 class="box-title">פגישות השבוע <span class="pulse" title="אנימציה (CSS)"></span></h1>
+
+        <table class="table" aria-label="טבלת פגישות">
+          <thead>
+            <tr>
+              <th>תאריך</th>
+              <th>שעה</th>
+              <th>סטודנט/ית</th>
+              <th>מטרה</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>18/02</td>
+              <td>10:00</td>
+              <td>נועה לוי</td>
+              <td>שיחת פתיחה + מיפוי צרכים</td>
+            </tr>
+            <tr>
+              <td>20/02</td>
+              <td>12:30</td>
+              <td>דניאל כהן</td>
+              <td>בדיקת התקדמות משימות</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="box">
+        <h2 class="box-title">התראות</h2>
+
+        <div class="form-actions">
+          <button id="toggleAlerts" class="btn btn-secondary" type="button">הצג/הסתר התראות </button>
+          <button id="markAll" class="btn btn-primary" type="button">סמן הכל כנקרא</button>
+        </div>
+
+        <div id="alertsArea" class="msg" style="margin-top:12px;">
+          <p><strong>התראה:</strong> לסטודנט/ית נועה לוי חסרים מסמכים להתאמות.</p>
+          <p><strong>התראה:</strong> פגישה בעוד 48 שעות – דניאל כהן.</p>
+        </div>
+
+        <p class="help" id="alertsText"></p>
+      </section>
+    </main>
+
+    <aside class="aside">
+      <section class="box">
+        <h2 class="box-title">הערה</h2>
+        <p class="help">
+            ההתראות כאן הן דמה.
+        </p>
+      </section>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <p class="footer-text">© מערכת ליווי אקדמי — פרויקט תכנות Web</p>
+  </footer>
+
+  <!-- JQuery (CDN) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="../JS/meetings.js"></script>
+</body>
+</html>
